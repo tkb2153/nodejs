@@ -1,0 +1,51 @@
+1.npm模組
+2.
+===============================
+//啟用伺服器port
+node example.js 0.0.0.0 
+http://learn.koding.com/guides/what-happened-to-127-0-0-1/
+===============================
+
+ex1.js
+基本
+
+ex2.js
+繼承
+
+ex3.js
+觸發事件
+
+ex4
+簡單自訂模組
+
+ex5
+讀,寫檔案
+1: callback範例
+http://dreamerslab.com/blog/tw/node-js-basics/
+http://dreamerslab.com/blog/tw/javascript-callbacks/
+
+ex6
+
+1: listen more port
+2: listen port & url path
+
+ex7
+client listen 網站跟port
+
+1 : client 連線伺服器
+2 : client 連線伺服器, 傳送資料至伺服器 
+
+P.S
+    Step-1 : 必須先node app_server.js 0.0.0.0(啟用伺服器)
+    Step-2 : node app.js(執行連線)
+
+ex8
+執行外部程式
+
+ex9
+
+
+
+
+
+
