@@ -13,16 +13,12 @@ server.on('connection', function(socket) {
 	socket.on('data', function(cli_data) {
 		cmdStr += cli_data.toString();
 
-		if ( cli_data.toString().indexOf('\n') == -1 ) {
+		/*if ( cli_data.toString().indexOf('\n') == -1 ) {
+			console.log(cli_data.toString().indexOf('\n'));
 			return ;
-		}
+		}*/
 
-		console.log('else');		
-		
 		var cmd = JSON.parse(cli_data);
-
-console.log(cmd);
-return ;
 
 		child = child_process.spawn(cmd.command, cmd.args);
 

@@ -9,7 +9,7 @@ ls.stdout.on('data', function(data) {
 });
 
 ls.on('end', function(data) {
-	console.log(data);
+	console.log('end');
 });
 /*
 var exec = require('child_process').exec,
