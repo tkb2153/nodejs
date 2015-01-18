@@ -101,8 +101,9 @@ http通訊協定,錯誤代碼
 1.http://expressjs.com/api.html
 
 ex11
+(未完成)資料庫連結
 
-
-
+ex12
+簡單部落格建置
 
 
