@@ -21,7 +21,7 @@ app.configure(function() {
 		key: 'node',
 		secret: 'HelloExpressSESSION'
 	}));
-	app.use(express.bodyParser());
+	//app.use(express.bodyParser());
 });
 
 app.use(app.router);
@@ -32,7 +32,7 @@ if ( 'development' == app.get('env') ) {
 }
 
 app.get('/', routes.index);
-app.post('/register', user.register);
+app.get('/register', user.register);
 app.get('/signin', user.signin);
 app.get('/signout', user.signout);
 app.get('/forget', user.forget);
@@ -41,7 +41,6 @@ app.get('/profile', user.profile);
 app.get('/modify/:id', user.modify);
 app.get('/message/:id', user.message);
 app.get('/register', user.register);
-app.get('/apis/login', user.login);
 
 
 http.createServer(app).listen(app.get('port'), function() {

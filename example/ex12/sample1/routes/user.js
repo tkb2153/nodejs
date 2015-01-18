@@ -3,26 +3,40 @@ exports.list = function(req, res) {
 };
 
 exports.register = function(req, res) {
-	res.send('This is the register page.');
+	if ( req.session.logined ) {
+		res.redirect('/');
+		return;
+	}
+	res.render('users/register');
 }
 
 exports.signin = function(req, res) {
-	res.send('This is the signin page.');
+	if ( req.session.logined ) {
+		res.redirect('/');
+		return;
+	}
+	res.render('users/signin');
 }
 
 exports.signout = function(req, res) {
-	res.send('This is the signout page.');
+	req.session.logined = false;
+	res.redirect('/');
+	res.end();
 }
 
 exports.forget = function(req, res) {
-	res.send('This is the forget page.');
+	if ( req.session.logined ) {
+		res.redirect('/');
+		return;
+	}
+	res.render('users/forget');
 }
 
 exports.profile = function(req, res) {
 	res.send('This is the profile page.');
 }
 
-exports.article = function(req, res) {
+exports.add_article = function(req, res) {
 	res.send('This is the add_article page.');
 }
 
@@ -34,3 +48,28 @@ exports.message = function(req, res) {
 	res.send('This is the message page.');
 }
 
+exports.login = function(req, res) {
+	if ( ( ! req.body.user ) || ( ! req.body.password ) ) {
+		res.redirect('register');
+		return;
+	}
+	req.session.name = req.body.user;
+	req.session.password = req.body.password;
+	req.session.logined = true;
+	res.redirect('/');
+	
+}
+/*
+var dogs = express.Router();
+
+    dogs.get('/', function(req, res, next) {
+        // doing more stuff 
+    });
+
+    dogs.post('/', function(req, res, next) {
+                // stuff stuff stuff
+    });
+
+// call our router we just created
+app.use('/dogs', dogs);
+*/

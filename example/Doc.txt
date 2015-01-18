@@ -1,4 +1,4 @@
-1.npm模組
+﻿1.npm模組
 2.
 安裝
 express{
@@ -95,7 +95,7 @@ http通訊協定,錯誤代碼
   401 - 未認證
   403 - 存取拒絕
 
-    Step-1 : npm install express@3.4.8 
+    Step-1 : npm install 
 
 參考:
 1.http://expressjs.com/api.html
@@ -105,5 +105,7 @@ ex11
 
 ex12
 簡單部落格建置
+Step-1 : 安裝mongodb
+Step-2 : npm install
 
 

@@ -13,5 +13,10 @@ exports.index = function(req, res){
 	});
 };
 */
+exports.index = function(req, res){
+	res.locals.username = req.session.name;
+	res.locals.authenticated = req.session.logined;
+	res.render('index', {title: 'Blog'});
+};
 
 

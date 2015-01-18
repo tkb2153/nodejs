@@ -1,3 +1,4 @@
+require('./lib/db');
 var express = require('express'),
     routes = require('./routes'),
     user = require('./routes/user'),
@@ -32,7 +33,7 @@ if ( 'development' == app.get('env') ) {
 }
 
 app.get('/', routes.index);
-app.post('/register', user.register);
+app.get('/register', user.register);
 app.get('/signin', user.signin);
 app.get('/signout', user.signout);
 app.get('/forget', user.forget);
@@ -42,6 +43,15 @@ app.get('/modify/:id', user.modify);
 app.get('/message/:id', user.message);
 app.get('/register', user.register);
 app.get('/apis/login', user.login);
+
+app.post('/apis/login', user.login);
+app.post('/apis/add', user.add);
+app.get('/apis/delete/:id', user.del_article);
+app.get('/apis/delete/:id', user.del_article);
+app.get('/apis/delete/:id', user.update);
+app.post('/apis/update/:id', user.update);
+app.post('/apis/comment/:id', user.comment);
+
 
 
 http.createServer(app).listen(app.get('port'), function() {

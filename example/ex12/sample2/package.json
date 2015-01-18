@@ -1,0 +1,22 @@
+{
+  "name": "sample2",
+  "version": "0.0.1",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "dependencies": {
+	"express": "3.4.8",
+	"jade": "*",
+	"mongoose": "*"
+  },
+  "keywords": [
+    "blog",
+    "mongodb",
+    "jade",
+    "express"
+  ],
+  "author": "Nick Lian",
+  "license": "MIT"
+}
