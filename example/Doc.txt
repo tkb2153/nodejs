@@ -103,7 +103,38 @@ http通訊協定,錯誤代碼
 ex11
 資料庫連結
 sample1 : mongodb(官方原生)
-(未完成)sample2 : mongoose(整合ORM/ODM的mongodb)
+{
+連線
+mongodb://[username]:[password]@[host]:[port]/[database]
+開啟集合(資料表)
+db.collection([collection name])
+新增資料
+collection.insert(docs[, options][,callback])
+查詢資料
+collection.find(query[, options], callback)
+刪除資料
+collection.remove([selector][, options], [callback])
+修改資料
+collection.update(selector, document[, options][, callback])
+}
+
+sample2 : mongoose(整合ORM/ODM的mongodb)
+{
+連線
+connect(uri(s), [options], [callback])
+修改
+Model.update(conditions, update, [options], [callback])
+刪除
+Model.remove(conditions, [callback])
+查詢
+Model.find(conditions, [fields], [options], [callback])
+資料表和欄位型別設計
+var model = mongoose.model('Cat', {
+	name: String,
+	age: Number,
+	created: Date
+})
+}
 
 ex12
 簡單部落格建置

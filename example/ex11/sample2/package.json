@@ -1,0 +1,17 @@
+{
+  "name": "sample2",
+  "version": "0.0.1",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "dependencies": {
+	"mongoose": "*"
+  },
+  "keywords": [
+    "mongoose"
+  ],
+  "author": "Nick Lian",
+  "license": "MIT"
+}
