@@ -134,6 +134,12 @@ var model = mongoose.model('Cat', {
 	age: Number,
 	created: Date
 })
+資料表預設欄位初始
+var model = mongoose.model('Cat', {
+	name: String,
+	age: { type: Number, default: 2 },
+	created: { type: Date, default: Date.now}
+})
 }
 
 ex12
