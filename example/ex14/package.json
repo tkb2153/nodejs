@@ -1,0 +1,19 @@
+{
+  "name": "sample1",
+  "version": "0.0.1",
+  "description": "ERROR: No README.md file found!",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "dependencies": {
+	"express": "3.4.8",
+	"socket.io": "*"
+  },
+  "keywords": [
+    "express",
+    "socket.io"
+  ],
+  "author": "Nick Lian",
+  "license": "MIT"
+}
