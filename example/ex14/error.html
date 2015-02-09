@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Socket.IO error</title>
+	</head>
+<body>
+ERROR
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+<script>
+	var socket = io();
+	socket.emit('chat message', $('#m').val());
+	$('#m').val('');
+</script>
+</html>
